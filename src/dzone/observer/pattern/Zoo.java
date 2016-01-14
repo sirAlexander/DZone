@@ -22,9 +22,11 @@ public class Zoo {
         // Notify the list of registered listeners
         this.notifyAnimalAddedListeners(animal);
     }
-    public void registerAnimalAddedListener (AnimalAddedListener listener) {
+    public AnimalAddedListener registerAnimalAddedListener (AnimalAddedListener listener) {
         // Add the listener to the list of registered listeners
         this.listeners.add(listener);
+        
+        return listener;
     }
     public void unregisterAnimalAddedListener (AnimalAddedListener listener) {
         // Remove the listener from the list of the registered listeners
